@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".FinanceApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/app_icon_square_2"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_icon_round_2"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FinanceApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".presentation.side_navigation.feedback.FeedbackActivity"
+            android:exported="false"
+            android:label="@string/title_activity_feedback"
+            android:theme="@style/Theme.FinanceApp" />
+        <activity
+            android:name=".presentation.side_navigation.SideNavigationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.onboarding.OnBoardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.auth_user.AuthUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".presentation.dashboard.MainActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name=".util.SmsListener"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="2147483647">
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

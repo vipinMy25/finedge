@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background_grey">#F4F6F6</color>
+    <color name="text_title_dark_grey">#1E1F4B</color>
+    <color name="text_description_dark_grey">#2E3E5C</color>
+    <color name="category_title_dark_grey">#030303</color>
+    <color name="text_blue">#262F4B</color>
+    <color name="nav_item_color">#303A5B</color>
+    <color name="text_orange">#EBAAAA</color>
+    <color name="text_transaction_item_title_dark_grey">#2A2A2A</color>
+    <color name="text_transaction_item_desc_dark_grey">#1A202C</color>
+    <color name="text_transaction_item_light_grey">#A1A1A1</color>
+    <color name="green">#06BFAD</color>
+    <color name="red">#F34336</color>
+    <color name="divider_view_light_grey">#E0E0E0</color>
+    <color name="divider_view_dark_grey">#EEEEEE</color>
+    <color name="title_green">#06BFAD</color>
+    <color name="text_grey">#979797</color>
+    <color name="otp_edit_text_grey">#A7A7A7</color>
+    <color name="pie_color_one">#0C0F59</color>
+    <color name="pie_color_two">#FF8080</color>
+    <color name="pie_color_three">#FDDD48</color>
+    <color name="pie_color_four">#5B8CEF</color>
+
+</resources>

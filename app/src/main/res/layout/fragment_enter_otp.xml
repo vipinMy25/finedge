@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_blue"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:elevation="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:src="@drawable/enter_otp_background" />
+
+            <ImageView
+                android:id="@+id/iv_back_enter_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:src="@drawable/back_arrow" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:background="@drawable/rounded_top_white_background"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Enter OTP"
+                android:textColor="@color/text_blue"
+                android:textSize="16sp" />
+
+            <com.chaos.view.PinView
+                android:id="@+id/pinview"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:cursorVisible="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:itemBackground="@color/white"
+                app:hideLineWhenFilled="false"
+                app:itemCount="4"
+                app:itemHeight="50dp"
+                app:itemRadius="10dp"
+                app:itemSpacing="20dp"
+                app:itemWidth="50dp"
+                app:lineColor="@color/otp_edit_text_grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Enter 4 Digit OTP sent to your email"
+                android:textColor="#8D8D8D"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_email_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/text_blue"
+                android:textSize="12sp"
+                tool:text="ram.purohit@hello.com" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_verify_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="50dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_solid"
+                android:paddingHorizontal="40dp"
+                android:text="Verify OTP"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

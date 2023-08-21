@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bank_acc_type_menu"
+        android:title="Bank Account"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/credit_card_type_menu"
+        android:title="Credit Card"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/loan_type_menu"
+        android:title="Loan"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/cash_type_menu"
+        android:title="Cash"
+        app:showAsAction="collapseActionView" />
+
+</menu>
